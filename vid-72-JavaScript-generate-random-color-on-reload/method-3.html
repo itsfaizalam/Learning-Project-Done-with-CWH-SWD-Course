@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Color with JavaScript on Refresh - Medhod 3</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 23px;
+        font-family: poppins;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        width: 100px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        Given 5 boxes, Assign a random color and a random background to each box using DOM concepts
+     -->
+    <div class="container">
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+    </div>
+
+    <script>
+      function name() {
+        let letter = "123456789ABCDEF"
+        let color = "#"
+        for (let i = 0; i < 6; i++) {
+          color += letter[Math.floor(Math.random() * 15)];
+        }
+        return color;
+      }
+
+      let a = document.querySelectorAll(".box");
+      a[0].style.backgroundColor = name();
+      a[1].style.backgroundColor = name();
+      a[2].style.backgroundColor = name();
+      a[3].style.backgroundColor = name();
+      a[4].style.backgroundColor = name();
+    </script>
+  </body>
+</html>
