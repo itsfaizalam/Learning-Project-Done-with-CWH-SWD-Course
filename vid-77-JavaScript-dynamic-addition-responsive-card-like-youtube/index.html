@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Dynamic Responsive Card - Like YouTube</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .container h1 {
+        text-align: center;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .card {
+        cursor: pointer;
+        background: #e0e0e0;
+        display: flex;
+        height: auto;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 0;
+        flex-wrap: wrap;
+        border-radius: 10px;
+      }
+
+      .image {
+        width: 200px;
+        position: relative;
+        flex-shrink: 0;
+      }
+
+      .image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .image .capsule {
+        position: absolute;
+        bottom: 4px;
+        right: 0px;
+        background: #161616;
+        opacity: 0.9;
+        color: #ffffff;
+        padding: 4px 6px;
+        border-radius: 4px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .text {
+        flex-grow: 1;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 0;
+        /* Ensure text doesn't overflow */
+      }
+
+      .text h2,
+      .text p {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        word-wrap: break-word;
+        /* Prevent long text from breaking the layout */
+      }
+
+      .text h2 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .text p {
+        color: #333333;
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 8px;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .image {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        .text {
+          width: 100%;
+          padding: 15px;
+        }
+
+        .text h2 {
+          font-size: 18px;
+        }
+
+        .text p {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .text h2 {
+          font-size: 16px;
+        }
+
+        .text p {
+          font-size: 12px;
+        }
+
+        .image {
+          width: 100%;
+        }
+
+        .image .capsule {
+          font-size: 12px;
+          padding: 2px 4px;
+        }
+      }
+
+      .note p {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 25px;
+        word-spacing: 2px;
+        color: #ff0000;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>JavaScript Dynamic Responsive Card - Like YouTube</h1>
+      <!-- This is the main part of code which is generate dynamically on JavaScript -->
+      <!-- <div class="card">
+        <div class="image">
+          <img
+            src="https://ideausher.com/wp-content/uploads/2023/09/home-sec-2.1.webp"
+            alt="Web Development App"
+          />
+          <div class="capsule">33:08</div>
+        </div>
+        <div class="text">
+          <h2>Web Development App | Idea Usher Video #2</h2>
+          <p>Idea Usher . 727K Views . 2 months ago</p>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="note">
+      <p>
+        <strong>Note: </strong>
+        <i
+          >This is the JavaScript based dynamic content to check dynamic feature
+          working or not just go to javascript part and copy the last line which
+          is createCard function and run in (browser inspect -> console) and
+          paste there you can see the the duplicate card will be added with
+          your's value</i
+        >
+        Thank you!
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
