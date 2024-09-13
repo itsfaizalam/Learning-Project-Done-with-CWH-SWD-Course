@@ -1,0 +1,186 @@
+.logo {}
+
+.logo img {
+    width: 164px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* align-content: center; */
+    font-family: segoe ui;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.right ul {
+    display: flex;
+    gap: 34px;
+
+}
+
+.right ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right ul li span {
+    padding: 0 3px;
+}
+
+.end {
+    cursor: pointer;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    margin: 70px;
+    font-family: sans-serif;
+}
+
+.first span {
+    font-size: 40px;
+}
+
+section span img {
+    width: 82px;
+    margin: 0 23px;
+}
+
+.first p {
+    font-size: 23px;
+    width: 44vw;
+    text-align: center;
+}
+
+.btn {
+    background: #00b6d1;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 8px 0;
+}
+.btn a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.green{
+background-color: #72dd84;
+}
+.blue{
+    background-color: #5fc2d1;
+}
+.flex{
+    display: flex;
+
+}
+.small{
+    font-size: 12px;
+}
+.second{
+max-width: 80vw;
+margin: auto;
+}
+@media screen and (max-width:818px){
+    .second{
+        width: 100%;
+}}
+.item{
+    padding: 23px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-name: faizAnimation;
+    animation-duration: 9s;
+    animation-timing-function: ease-out;
+    animation-delay:1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;/*Important*/
+    animation-fill-mode: both;
+
+    
+   
+}
+.item-lang{
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 23px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:12px;
+}
+
+.download :nth-child(2){
+    font-size: 23px;
+}
+.download img{
+    padding: 0 12px;
+
+}
+.download{
+    font-family: sans-serif;
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+@media screen and (max-width:1235px){
+    .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:12px;
+}}
+@media screen and (max-width:818px){
+    .grid{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap:12px;
+}}
+
+
+@keyframes faizAnimation{
+
+    0%   {background-color: #00e727;}
+    25%  {background-color: #FFE500;}
+    50%  {background-color: #ff0000;}
+    100%  {background-color: #2600ff;}
+
+}
+
+/* Style for Top Progress bar for scrolling status */
+/* Style for the Progress Bar Container */
+#progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #f3f3f3; /* Background color of the progress bar container */
+    z-index: 9999;
+}
+
+/* Style for the Progress Bar */
+#progress-bar {
+    height: 100%;
+    width: 0;
+    background:#F24E1E; /*Color of the progress bar */
+    transition: width 0.1s ease-in-out;
+}
