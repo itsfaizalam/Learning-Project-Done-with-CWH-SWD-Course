@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music World</title>
+    <style>
+      /* Global styles */
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 20px;
+        background: #e0e0e0;
+        border-radius: 10px;
+      }
+
+      .column1,
+      .column2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .songs-list {
+        padding: 10px;
+        color: #444444;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      /* Ensure full visibility of audio controls */
+      audio {
+        max-width: 300px; /* Ensures the audio controls are visible */
+        border-radius: 10px;
+        margin: 10px 0;
+      }
+
+      video {
+        width: 100%;
+        max-width: 520px;
+        border-radius: 10px;
+        margin: 10px 0;
+      }
+
+      /* Heading styles */
+      h1 {
+        color: #000000;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        color: #000000;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .title p {
+        color: #444444;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      /* Responsive media queries */
+      @media (min-width: 768px) {
+        .column1,
+        .column2 {
+          flex: 1 1 45%;
+          max-width: 45%;
+        }
+
+        .container {
+          justify-content: space-between;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .column1,
+        .column2 {
+          flex: 1 1 48%;
+          max-width: 48%;
+        }
+
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 32px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <header>
+    <h1>Welcome to the music world</h1>
+    <div class="title">
+      <h2>My Audios and Videos for the Day</h2>
+      <p>This is my one of the favrouite playlist.</p>
+    </div>
+  </header>
+  <body>
+    <div class="container">
+      <div class="column1">
+        <div class="songs-lsit">
+          <p>Freedom Motivation</p>
+          <audio
+            src="/faizCWH16/files/1_freedom_motivation.mp3"
+            controls
+            muted
+            autoplay
+            preload="auto"
+          ></audio>
+        </div>
+
+        <div class="songs-lsit">
+          <p>Pufino Adventure</p>
+          <audio
+            src="/faizCWH16/files/2_pufino_adventure.mp3"
+            controls
+            muted
+            autoplay
+            preload="metadata"
+          ></audio>
+        </div>
+      </div>
+      <div class="column2">
+        <div class="songs-lsit">
+          <video
+            src="/faizCWH16/files/3_beautiful_nature.mp4"
+            controls
+            width="520"
+            height="auto"
+          ></video>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
