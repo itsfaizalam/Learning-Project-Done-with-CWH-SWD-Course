@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Child and nth Child in CSS</title>
+    <style>
+h1{
+    background-color: #000000;
+        color: #ffffff;
+        padding:10px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+}
+
+
+
+        p{
+            padding:10px;
+            border-radius: 10px;
+            background-color: #028dff;
+            color: #1e00ff;
+        }
+
+       section p:first-child{ 
+            background-color: #ff9f9f;
+            color: #d80000;
+        }
+      div h2:nth-child(1){
+        background-color: #2f2f2f;
+        color: #ff9f9f;
+        padding:10px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 34px;
+      }
+        div p:nth-child(2){ 
+            background-color: #eeff01;
+            color: #b3b00f;
+        }
+        div p:nth-child(3){ 
+            background-color: #fab2ff;
+            color: #cd1ae0;
+        }
+        div p:nth-child(4){ 
+            background-color: #51ff00;
+            color: #20af46;
+        }       
+    </style>
+</head>
+<body>
+    <!-- Write html and css code to style a paragraph inside a div which contains 5 other paragraphs. The first paragraph must have background color yellow and text color red. The other paragraphs must have background color blue and text color white. The HMTL is written below for your reference. Do not change this html -->
+
+    <h1>CSS first-child and nth-child Solution</h1>
+    <section>        
+        <p><strong>div 1 para 1:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore harum nesciunt eveniet accusantium debitis delectus minus vel non repudiandae in!</p>
+        <p><strong>div 1 para 2:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati libero possimus non cupiditate pariatur ducimus repellat. Hic quam labore quas.</p>
+        <p><strong>div 1 para 3:</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quasi rem neque, aliquam ducimus quisquam ipsa suscipit sunt quia tempora.</p>
+        <p><strong>div 1 para 4:</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, ratione est? Quisquam suscipit repellat delectus minima necessitatibus ullam aperiam alias.</p>
+    </section>
+    <div>
+        <h2>Div 2</h2>
+        <p><strong>div 2 para 1:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore harum nesciunt eveniet accusantium debitis delectus minus vel non repudiandae in!</p>
+        <p><strong>div 2 para 2:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati libero possimus non cupiditate pariatur ducimus repellat. Hic quam labore quas.</p>
+        <p><strong>div 2 para 3:</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quasi rem neque, aliquam ducimus quisquam ipsa suscipit sunt quia tempora.</p>
+        <p><strong>div 2 para 4:</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, ratione est? Quisquam suscipit repellat delectus minima necessitatibus ullam aperiam alias.</p>
+    </div>
+    <div>
+        <h2>Div 3</h2>
+        <p><strong>div 3 para 1:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore harum nesciunt eveniet accusantium debitis delectus minus vel non repudiandae in!</p>
+        <p><strong>div 3 para 2:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati libero possimus non cupiditate pariatur ducimus repellat. Hic quam labore quas.</p>
+        <p><strong>div 3 para 3:</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quasi rem neque, aliquam ducimus quisquam ipsa suscipit sunt quia tempora.</p>
+        <p><strong>div 3 para 4:</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, ratione est? Quisquam suscipit repellat delectus minima necessitatibus ullam aperiam alias.</p>
+    </div>
+
+</body>
+</html>
