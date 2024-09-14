@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>OOP in JavaScript (Hinglish Explanation)</h1>
+    <p>OOP (Object-Oriented Programming) JavaScript mein ek programming style hai jo objects ko use karta hai. Object basically ek entity hoti hai jisme properties (data) aur methods (functions) hote hain. Object-oriented programming ka main focus reusability aur modularity hota hai.</p>
+
+    <h2>OOP ke key concepts:</h2>
+    <ul>
+        <li><strong>Class</strong>: Ek blueprint ya template hota hai jisse hum objects bana sakte hain.</li>
+        <li><strong>Object</strong>: Class ka ek instance hota hai.</li>
+        <li><strong>Inheritance</strong>: Ek class doosri class ki properties aur methods ko inherit (yaani use) kar sakti hai.</li>
+        <li><strong>Encapsulation</strong>: Data aur methods ko object ke andar bundle karna.</li>
+        <li><strong>Polymorphism</strong>: Same method ko different objects ke liye alag-alag tareeke se behave karne dena.</li>
+        <li><strong>Abstraction</strong>: Sirf important details show karna aur baaki cheezein hide karna.</li>
+    </ul>
+
+    <h2>Example:</h2>
+    <p>Chalo ek example ke through samajhte hain:</p>
+
+    <pre><code>
+// Class define kar rahe hain
+class Car {
+  constructor(brand, model) {
+    this.brand = brand;  // yeh property hai
+    this.model = model;  // yeh bhi property hai
+  }
+
+  // Method define kar rahe hain
+  start() {
+    console.log(`${this.brand} ${this.model} ki gaadi start ho gayi!`);
+  }
+}
+
+// Class ka object banaate hain
+const myCar = new Car('Tesla', 'Model X');
+myCar.start(); // Output: Tesla Model X ki gaadi start ho gayi!
+
+// Inheritance ka example
+class ElectricCar extends Car {
+  constructor(brand, model, batteryLife) {
+    super(brand, model); // super keyword se parent class ke constructor ko call kar rahe hain
+    this.batteryLife = batteryLife; // ElectricCar ki apni property
+  }
+
+  // Method override kar rahe hain (Polymorphism)
+  start() {
+    console.log(`${this.brand} ${this.model} ki electric gaadi start ho gayi! Battery life: ${this.batteryLife}`);
+  }
+}
+
+const myElectricCar = new ElectricCar('Tesla', 'Model S', '85%');
+myElectricCar.start(); // Output: Tesla Model S ki electric gaadi start ho gayi! Battery life: 85%
+    </code></pre>
+
+    <h2>Explanation:</h2>
+    <p>- Humne <code>Car</code> class banaya jisme <code>brand</code> aur <code>model</code> properties hain.</p>
+    <p>- Ek <code>start()</code> method banaya jo console mein output deta hai.</p>
+    <p>- <code>myCar</code> object banaya using <code>Car</code> class, aur uska <code>start()</code> method call kiya.</p>
+    <p>- Phir inheritance ka use karke <code>ElectricCar</code> class banayi jo <code>Car</code> se inherit karti hai, aur method overriding dikhaya.</p>
+
+    <p>Yeh OOP ka basic idea hai JavaScript mein, jo reusability aur maintainability ko improve karta hai.</p>
+
+</body>
+</html>
