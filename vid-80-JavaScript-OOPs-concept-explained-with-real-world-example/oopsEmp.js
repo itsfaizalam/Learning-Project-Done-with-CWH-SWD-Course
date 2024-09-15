@@ -14,7 +14,8 @@ createEmpID(){
 const newEmployee = new iuEmployees('101', 'Faiz', 'Male', '80,0000')
 newEmployee.createEmpID();
 
-// Step 2
+
+// Step 2:
 
 // Inheritance Example
 class empOtherDetials extends iuEmployees{
