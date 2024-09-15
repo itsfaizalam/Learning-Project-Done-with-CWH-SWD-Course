@@ -6,5 +6,5 @@
         "esbenp.prettier-vscode",       // Prettier - Code formatter
         "ms-vscode.live-server",        // Live Preview
         "vscode-icons-team.vscode-icons" // VS Code Icons
-    ]
+        ]"formulahendry.code-runner"     // Code Runner
 }
