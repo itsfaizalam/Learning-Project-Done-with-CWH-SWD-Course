@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solve Exercise and Project – Code with Harry Sigma Web Development Course</title>
     <style>
-        /* Dark Mode Styling */
+        /* General Styling */
         body {
             background-color: #1e1e1e;
             color: #e0e0e0;
@@ -28,24 +28,43 @@
             margin-bottom: 20px;
         }
 
-        /* Navigation Bar Styling */
+        /* Responsive Padding for Body */
+        body {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-left: 3%;
+                padding-right: 3%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-left: 2%;
+                padding-right: 2%;
+            }
+        }
+
+        /* Vertical Navigation Styling */
         nav {
             background-color: #333333;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
             margin-bottom: 30px;
+            width: 100%;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            justify-content: space-around;
         }
 
         nav ul li {
-            margin: 0;
+            margin-bottom: 10px;
         }
 
         nav ul li a {
@@ -53,22 +72,15 @@
             color: #bb86fc;
             font-size: 1.1rem;
             padding: 10px 15px;
-            display: inline-block;
+            display: block;
             border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         nav ul li a:hover {
             background-color: #bb86fc;
             color: #1e1e1e;
-        }
-
-        /* Add hover effect on navigation links */
-        nav ul li a:focus,
-        nav ul li a:hover {
-            outline: none;
-            background-color: #bb86fc;
-            color: #1e1e1e;
-            transition: 0.3s ease;
         }
 
         /* Button Styling */
@@ -81,11 +93,35 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 20px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         button:hover {
             background-color: #ff79c6;
             color: #ffffff;
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
         }
     </style>
     <!-- Link to Google Fonts for better typography -->
@@ -95,20 +131,17 @@
 <body>
     <h1>Solve Exercise and Project – Code with Harry Sigma Web Development Course</h1>
 
-    <p>This repository contains solutions to all exercises, practice problems, and projects covered in the Code With
-        Harry Sigma Web Development Course. The solutions are implemented by me as part of my learning and practice. The
-        content includes well-documented code for exercises and projects designed to enhance practical web development
-        skills.</p>
+    <p>This repository contains solutions to all exercises, practice problems, and projects covered in the Code With Harry Sigma Web Development Course. The solutions are implemented by me as part of my learning and practice. The content includes well-documented code for exercises and projects designed to enhance practical web development skills.</p>
 
     <p>Feel free to explore the solutions and contribute or provide suggestions for improvement!</p>
 
-    <!-- Navigation Links -->
+    <!-- Vertical Navigation Links -->
     <nav>
         <ul>
-            <li><a href="#link1">Exercise 1</a></li>
-            <li><a href="#link2">Exercise 2</a></li>
-            <li><a href="#link3">Exercise 3</a></li>
-            <li><a href="#link4">Exercise 4</a></li>
+            <li><a href="/vid-16-music-world/index.html">vid-16-music-world</a></li>
+            <li><a href="/vid-27-first-and-nth-child-css/index.html">vid-27-first-and-nth-child-css</a></li>
+            <li><a href="/vid-37-responsive-card-creation-html-css/index.html">vid-37-responsive-card-creation-html-css</a></li>
+            <li><a href="/vid-40-website-basic-structure-using-css-multicolour/index.html">vid-40-website-basic-structure-using-css-multicolour</a></li>
             <li><a href="#link5">Exercise 5</a></li>
             <li><a href="#link6">Exercise 6</a></li>
             <li><a href="#link7">Exercise 7</a></li>
