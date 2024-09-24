@@ -20,7 +20,8 @@ for (const student of students) {
 // console.log("houses")
 
 // extra logic created by faiz
-console.log("House Assignments:");
+console.log("House Alottment for Students:");
 for (let i = 0; i < students.length; i++) {
-    console.log(`${students[i]} : ${houses[i]} house`);
+    // const element = students[i];
+    console.log(`${students[i]} : ${houses[i]}`)
 }
