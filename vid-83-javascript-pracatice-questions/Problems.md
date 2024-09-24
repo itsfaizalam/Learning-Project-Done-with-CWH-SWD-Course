@@ -11,6 +11,8 @@
 
 4. The Password Validator:
    You are building a password validation feature. Create a function that checks if a given password meets the following criteria: at least 8 characters long, contains both uppercase and lowercase letters, and includes at least one digit.
+<!-- Solve with ASCII values (this is the smart way) Time Stamp 06:45-->
+
 
 5. The Sum Selector:
    You are working on a function that should sum all numbers in an array until it encounters a negative number. Write a function that performs this summation.
