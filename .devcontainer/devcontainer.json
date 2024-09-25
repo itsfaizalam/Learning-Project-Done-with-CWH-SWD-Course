@@ -1,11 +1,11 @@
 // This code is created by Faiz alam for Auto install the following extension on VS Code
-{
-    "name": "My Codespace",
-    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
-    "extensions": [
-        "esbenp.prettier-vscode",       // Prettier - Code formatter
-        "ms-vscode.live-server",        // Live Preview
-        "vscode-icons-team.vscode-icons" // VS Code Icons
-       "formulahendry.code-runner"      // Code Runner by Jun Han
-    ]
-}
+// {
+//     "name": "My Codespace",
+//     "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
+//     "extensions": [
+//         "esbenp.prettier-vscode",       // Prettier - Code formatter
+//         "ms-vscode.live-server",        // Live Preview
+//         "vscode-icons-team.vscode-icons" // VS Code Icons
+//        "formulahendry.code-runner"      // Code Runner by Jun Han
+//     ]
+// }
