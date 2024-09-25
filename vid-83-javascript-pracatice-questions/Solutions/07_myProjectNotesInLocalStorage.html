@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-Taking App</title>
+</head>
+<body>
+
+    <h2>Note-Taking App</h2>
+    <div>
+        <input type="text" id="noteTitle" placeholder="Note Title">
+        <textarea id="noteContent" placeholder="Note Content"></textarea>
+        <button onclick="saveNote()">Save Note</button>
+    </div>
+
+    <script>
+        function saveNoteToLocalStorage(note) {
+            // Get existing notes from localStorage, if any
+            let existingNotes = JSON.parse(localStorage.getItem('notes')) || [];
+            
+            // Add the new note to the array of existing notes
+            existingNotes.push(note);
+            
+            // Save the updated notes array back to localStorage
+            localStorage.setItem('notes', JSON.stringify(existingNotes));
+        }
+
+        function saveNote() {
+            const title = document.getElementById('noteTitle').value;
+            const content = document.getElementById('noteContent').value;
+
+            if (title && content) {
+                // Create a note object
+                const note = {
+                    title: title,
+                    content: content,
+                    date: new Date().toLocaleString() // Adding a timestamp
+                };
+                
+                // Save the note to local storage
+                saveNoteToLocalStorage(note);
+                
+                alert('Note saved successfully!');
+                
+                // Clear the input fields after saving
+                document.getElementById('noteTitle').value = '';
+                document.getElementById('noteContent').value = '';
+            } else {
+                alert('Please fill in both the title and content.');
+            }
+        }
+    </script>
+
+</body>
+</html>
