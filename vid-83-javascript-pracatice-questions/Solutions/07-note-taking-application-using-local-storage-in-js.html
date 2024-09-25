@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-Taking App</title>
+    <style>
+        /* Dark Theme Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            background-color: #292929;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            box-sizing: border-box;
+        }
+
+        /* Center header text */
+        h2 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Input fields styling */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            background-color: #444444;
+            color: #f0f0f0;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #b0b0b0;
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            input[type="text"],
+            textarea {
+                font-size: 0.9rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Scrollable textarea */
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Note-Taking App</h2>
+        <input type="text" id="noteTitle" placeholder="Note Title">
+        <textarea id="noteContent" placeholder="Note Content"></textarea>
+        <button onclick="saveNote()">Save Note</button>
+    </div>
+
+    <script>
+        function saveNoteToLocalStorage(note) {
+            // Get existing notes from localStorage, if any
+            let existingNotes = JSON.parse(localStorage.getItem('notes')) || [];
+            
+            // Add the new note to the array of existing notes
+            existingNotes.push(note);
+            
+            // Save the updated notes array back to localStorage
+            localStorage.setItem('notes', JSON.stringify(existingNotes));
+        }
+
+        function saveNote() {
+            const title = document.getElementById('noteTitle').value;
+            const content = document.getElementById('noteContent').value;
+
+            if (title && content) {
+                // Create a note object
+                const note = {
+                    title: title,
+                    content: content,
+                    date: new Date().toLocaleString() // Adding a timestamp
+                };
+                
+                // Save the note to local storage
+                saveNoteToLocalStorage(note);
+                
+                alert('Note saved successfully!');
+                
+                // Clear the input fields after saving
+                document.getElementById('noteTitle').value = '';
+                document.getElementById('noteContent').value = '';
+            } else {
+                alert('Please fill in both the title and content.');
+            }
+        }
+    </script>
+
+</body>
+</html>
