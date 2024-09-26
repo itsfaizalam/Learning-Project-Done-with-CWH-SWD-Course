@@ -18,3 +18,4 @@ function doubleTrouble(arr){
 let input = [2, 3, 3, 4, 5, 5, 5];
 console.log(doubleTrouble(input)); 
 // Output: [4, 6, 3, 8, 10, 5, 5]
+
