@@ -1,1 +1,1 @@
-console.log(doubleTrouble(input)); 
+Character ka ASCII value nikalte hain
